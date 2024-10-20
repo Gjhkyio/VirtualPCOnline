@@ -1,20 +1,16 @@
 const filesToCache = [
-	"VirtualXP.htm",
-	"VirtualXP.iso",
-	"VirtualXP.js",
-	"VirtualXP.json",
-	"VirtualXP.png",
-	"VirtualXP.wasm",
-	"VirtualXPBIOS.bin",
-	"VirtualXPFavIcon_16x16.png",
-	"VirtualXPFavIcon_192x192.png",
-	"VirtualXPFavIcon_512x512.png",
-	"VirtualXPLoader.js",
-	"VirtualXPShare.png",
-	"VirtualXPVGA.bin"
+	"index.htm",
+	"VirtualPC.iso",
+	"VirtualPC.js",
+	"VirtualPC.json",
+	"VirtualPC.png",
+	"VirtualPC.wasm",
+	"VirtualPCBIOS.bin",
+	"VirtualPCLoader.js",
+	"VirtualPCVGA.bin"
 ];
 
-const staticCacheName = "virtualxp-v1";
+const staticCacheName = "virtualpc-v1";
 
 self.addEventListener("install", event => {
 	event.waitUntil(
