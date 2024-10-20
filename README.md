@@ -1,4 +1,4 @@
-# VirtualXP
+# VirtualPC
 
 Virtual Machine running on a Web browser.
 
@@ -6,11 +6,11 @@ Virtual Machine running on a Web browser.
 
 ## Web
 
-https://lrusso.github.io/VirtualXP/VirtualXP.htm
+https://gjhkyio.github.io/VirtualPCOnline/
 
-## Editing the VirtualXP Registry
+## Editing the VirtualPC Registry
 
-Within the **VirtualXP.iso** image file you will find the following files that belongs to the System Registry.
+Within the **VirtualPC.iso** image file you will find the following files that belongs to the System Registry.
 
 | REGISTRY KEY  | FILE |
 | :------------ | :--------------- |
@@ -24,12 +24,12 @@ reg load HKCU\OFFLINE C:\DEFAULT
 reg load HKLM\OFFLINE C:\SOFTWARE
 ```
 
-Those lines will mount the VirtualXP Registry in:
+Those lines will mount the VirtualPC Registry in:
 
 * HKEY_CURRENT_USER\OFFLINE 
 * HKEY_LOCAL_MACHINE\OFFLINE
  
-Now open the Registry editor and at the mentioned location you will find all the settings that VirtualXP is using. Modify all the things that you may need in there and after that run the following lines:
+Now open the Registry editor and at the mentioned location you will find all the settings that VirtualPC is using. Modify all the things that you may need in there and after that run the following lines:
 
 ```
 reg unload HKCU\OFFLINE
@@ -43,17 +43,17 @@ Those lines will:
 * Unmount the **DEFAULT** file and save changes in it.
 * Unmount the **SOFTWARE** file and save changes in it.
 
-After this, you must copy the modified **DEFAULT** and **SOFTWARE** files back to the **VirtualXP.iso** image file.
+After this, you must copy the modified **DEFAULT** and **SOFTWARE** files back to the **VirtualPC.iso** image file.
 
 ## The MODELRAM.EXE file
 
-Within the **VirtualXP.iso** image you will find the **\MODELRAM.EXE** file that it is self extracting exe file created with the 7-Zip command line that automatically extracts the **Documents and Settings** folder in the RAMDisk when VirtualXP is booting. The command to create this file is the following:
+Within the **VirtualPC.iso** image you will find the **\MODELRAM.EXE** file that it is self extracting exe file created with the 7-Zip command line that automatically extracts the **Documents and Settings** folder in the RAMDisk when VirtualXP is booting. The command to create this file is the following:
 
 ```
 7z a MODELRAM.EXE -mx9 -sfx "Documents and Settings"
 ```
 
-## VirtualXP is a modified version of Halfix
+## VirtualPC is a modified version of VirtualXP
 
 https://github.com/nepx/halfix
 
